@@ -41,6 +41,7 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
+    //Call from other scripts to stop music.
     public void StopMusic()
     {
         musicSource.Stop();
