@@ -18,7 +18,7 @@ public class CameraController : MonoBehaviour
         float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
         cameraVerticalRotation -= inputY;
-        cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, -90f,90f);
+        cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, -60f,60f);
         transform.localEulerAngles = Vector3.right * cameraVerticalRotation;
     }
 }
