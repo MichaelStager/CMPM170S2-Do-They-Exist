@@ -3,7 +3,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform player;
-    public float mouseSensitivity = 3f;
+    public float mouseSensitivity = 5f;
     float cameraVerticalRotation = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
