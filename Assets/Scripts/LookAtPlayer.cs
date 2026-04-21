@@ -3,6 +3,7 @@ using UnityEngine;
 public class LookAtPlayer : MonoBehaviour
 {
     GameObject player;
+    Vector3 direction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,6 +13,8 @@ public class LookAtPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.LookAt(player.transform);
+        direction = player.transform.position - this.gameObject.transform.position;
+        direction.y = 0f;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 }
