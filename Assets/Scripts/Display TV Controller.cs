@@ -13,16 +13,12 @@ public class DisplayTVController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // tempory way to test if SetTVFaceWorks 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            temp();
+            int randomIndex = Random.Range(0, faces.Length);
+            SetTVFace(faces[randomIndex]);
         }
-    }
-    // Temporary function to test setting a random tv face using SetTVFace()
-    public void temp()
-    {
-        int randomIndex = Random.Range(0, faces.Length);
-        SetTVFace(faces[randomIndex]);
     }
     
     public void SetTVFace(Sprite newFace)
