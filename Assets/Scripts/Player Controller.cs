@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     public void Move(Vector2 movementVector)
     {
         Vector3 move = transform.forward * movementVector.y + transform.right * movementVector.x;
