@@ -5,7 +5,7 @@ public class NPCWander : MonoBehaviour
 {
     public float wanderRadius = 8f;
     public float minWaitTime = 1f;
-    public float maxWaitTime = 4f;
+    public float maxWaitTime = 2f;
 
     private NavMeshAgent agent;
     private float waitTimer;
@@ -20,7 +20,6 @@ public class NPCWander : MonoBehaviour
 
     void Update()
     {
-        // If agent reached destination
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             if (!isWaiting)
@@ -31,7 +30,6 @@ public class NPCWander : MonoBehaviour
             }
         }
 
-        // Waiting behavior (feels more human)
         if (isWaiting)
         {
             waitTimer += Time.deltaTime;
