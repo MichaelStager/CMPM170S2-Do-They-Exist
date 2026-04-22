@@ -3,8 +3,11 @@ using UnityEngine.InputSystem;
 
 public class InputController : MonoBehaviour
 {
-    public PlayerController CharacterController;
+    public PlayerController playerController;
     private InputAction moveAction, lookAction;
+    Vector2 moveVector;
+    Vector2 lookVector;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,11 +19,11 @@ public class InputController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 moveVector = moveAction.ReadValue<Vector2>();
-        CharacterController.Move(moveVector);
+        moveVector = moveAction.ReadValue<Vector2>();
+        playerController.Move(moveVector);
 
-        Vector2 lookVector = lookAction.ReadValue<Vector2>();
-        CharacterController.Rotate(lookVector);
+        lookVector = lookAction.ReadValue<Vector2>();
+        playerController.Rotate(lookVector);
 
     }
 }
