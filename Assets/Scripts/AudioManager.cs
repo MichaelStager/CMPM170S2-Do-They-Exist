@@ -8,6 +8,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource musicSource;
     public AudioSource sfxSource;
 
+    //Might come in handy for 3D audio
+   // float threeDimentionalAudioLevel = 1.0f;  //Maybe so we can volume set all 3dsounds
     private void Awake()
     {
         // Singleton setup. This allows us to keep the same audio manager, and only have 1 at a time.

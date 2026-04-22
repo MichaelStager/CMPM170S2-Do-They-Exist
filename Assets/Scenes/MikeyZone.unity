@@ -1229,6 +1229,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1924919502 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7209687231540575164, guid: 34613621a5a28934c967bf650a1f05c2, type: 3}
+  m_PrefabInstance: {fileID: 1210735159981884673}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa71c69ebf3320247abc0d7c47d16d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
 --- !u!1001 &1210735159981884673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1361,6 +1372,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7380336858706288975, guid: 34613621a5a28934c967bf650a1f05c2, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1924919502}
     - target: {fileID: 7380336858706288975, guid: 34613621a5a28934c967bf650a1f05c2, type: 3}
       propertyPath: playerSensitivity
       value: 100
