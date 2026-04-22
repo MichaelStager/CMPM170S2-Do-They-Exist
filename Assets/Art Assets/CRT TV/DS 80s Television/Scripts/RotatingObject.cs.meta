@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b83b78c4c25f9e84cba6225ad76c556b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121495
+  packageName: DS Retro Television Set
+  packageVersion: 1.0
+  assetPath: Assets/danthaigames/DS 80s Television/Scripts/RotatingObject.cs
+  uploadId: 252738

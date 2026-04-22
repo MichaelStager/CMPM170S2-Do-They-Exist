@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44df9344929c7b84f9d4f46cb8109ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputController
-  CharacterController: {fileID: 7209687231540575164}
+  playerController: {fileID: 7209687231540575164}
 --- !u!143 &4237267538091014238
 CharacterController:
   m_ObjectHideFlags: 0
