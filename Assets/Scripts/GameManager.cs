@@ -6,19 +6,21 @@ using UnityEngine;
 using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-    bool isRoundActive;
-    public NPCData target;
-    public List<NPCData> npcs;//This might change from a gameObject to a NPC class object if we make one.
-    public List<Sprite> levelFacePool;
-    [SerializeField] GameObject npcPreFab;
+   public static GameManager Instance;
+   bool isRoundActive;
+   public NPCData target;
+   public Sprite targetSprite;
+   List<NPCData> npcs;
+   public List<Sprite> levelFacePool;
+   [SerializeField] GameObject npcPreFab;
     //The parent for the new gameobjects to spawn into
-    [SerializeField] GameObject npcHolder;
-    int npcTotal = 10; 
+   [SerializeField] GameObject npcHolder;
+   [SerializeField] int npcTotal = 10; 
     //float timer;
    // float maxTime = 120;
     private void Awake()
     {
+        npcs = new List<NPCData>();
         // Singleton setup. This allows us to keep the same audio manager, and only have 1 at a time.
         if (Instance == null)
         {
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        setTargetSprite();
         StartWave();
     }
 
@@ -43,22 +46,25 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
+    //starts a new "wave" of NPCS. The first NPC spawned will be the target. Due to random spawn locations that doesnt matter.
     void StartWave()
     {
         for(int i = 0; i < npcTotal; i++)
         {
-            
             if (i == 0)
             {
-                  npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<NPCData>().SetTarget());
+                npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity,npcHolder.transform).GetComponent<NPCData>().SetTarget());
              
             }
-            npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<NPCData>());
+            npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity,npcHolder.transform).GetComponent<NPCData>());
         }
     }
-    void setTarget(NPCData target)
+
+    //sets the sprite for the targetNPC
+    public void setTargetSprite()
     {
-        levelFacePool.Remove(target.npcFaceTarget.sprite);
+        
+        targetSprite = levelFacePool[Random.Range(0, levelFacePool.Count)];
+        levelFacePool.Remove(targetSprite);
     }
 }

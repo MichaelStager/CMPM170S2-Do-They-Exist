@@ -8,12 +8,18 @@ public class NPCData : MonoBehaviour
 
     private void Awake()
     {
-        SetRandomFace();
+        if (!isTarget)
+        {
+            SetRandomFace();
+        }
     }
+
+    //To set the NPC you want to be the target. Will talk with gamemanger to get the target sprite and markdown who is the target.
     public NPCData SetTarget()
     {
         isTarget = true;
         GameManager.Instance.target = this;
+        npcFaceTarget.sprite = GameManager.Instance.targetSprite;
         return this;
     }
 
