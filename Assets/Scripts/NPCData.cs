@@ -4,16 +4,17 @@ public class NPCData : MonoBehaviour
 {
     bool isTarget = false;
     //The face sprite of the npc
-    [SerializeField] SpriteRenderer npcFaceTarget;
+    public SpriteRenderer npcFaceTarget;
 
     private void Awake()
     {
         SetRandomFace();
     }
-    public void makeTarget()
+    public NPCData SetTarget()
     {
         isTarget = true;
         GameManager.Instance.target = this;
+        return this;
     }
 
     public bool getIsTarget()
@@ -23,7 +24,7 @@ public class NPCData : MonoBehaviour
 
     public void SetRandomFace()
     {
-       npcFaceTarget.sprite = GameManager.Instance.levelFacePool[Random.Range(0, GameManager.Instance.levelFacePool.Length)];
+       npcFaceTarget.sprite = GameManager.Instance.levelFacePool[Random.Range(0, GameManager.Instance.levelFacePool.Count)];
     }
 
     

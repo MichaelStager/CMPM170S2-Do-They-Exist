@@ -1,3 +1,6 @@
+//TODO: SET THE TARGET TO A THE FIRST PERSON THAT SPAWNS, THEN REMOVE THAT FACE FROM THE LVL FACE POOL.
+// 302----302----302-----302------302------302-----302------302-----302-----302-----302-----302----302 ( I seem to be trapped... inside... by chains...)
+
 using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
@@ -7,7 +10,7 @@ public class GameManager : MonoBehaviour
     bool isRoundActive;
     public NPCData target;
     public List<NPCData> npcs;//This might change from a gameObject to a NPC class object if we make one.
-    public Sprite[] levelFacePool;
+    public List<Sprite> levelFacePool;
     [SerializeField] GameObject npcPreFab;
     //The parent for the new gameobjects to spawn into
     [SerializeField] GameObject npcHolder;
@@ -45,7 +48,17 @@ public class GameManager : MonoBehaviour
     {
         for(int i = 0; i < npcTotal; i++)
         {
+            
+            if (i == 0)
+            {
+                  npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<NPCData>().SetTarget());
+             
+            }
             npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity).GetComponent<NPCData>());
         }
+    }
+    void setTarget(NPCData target)
+    {
+        levelFacePool.Remove(target.npcFaceTarget.sprite);
     }
 }
