@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //These maybe should not be here , but it helps with testing.
         setTargetSprite();
         StartWave();
     }
@@ -66,5 +67,11 @@ public class GameManager : MonoBehaviour
         
         targetSprite = levelFacePool[Random.Range(0, levelFacePool.Count)];
         levelFacePool.Remove(targetSprite);
+    }
+
+    //This is a clean up function for end of round.
+    public void EndRound()
+    {
+        
     }
 }
