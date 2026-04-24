@@ -2,32 +2,26 @@ using System.Numerics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
-
 public class ExitDoor : MonoBehaviour
 {
-    
     private GameObject ExitUi;
-    private GameObject DoorBody;
     private bool enableExit = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        DoorBody = GameObject.Find("DoorBody");
         ExitUi = GameObject.Find("ExitUI");
         ExitUi.SetActive(false);
     }
-
     // Update is called once per frame
     void Update()
     {
+        // Ensures player doesn't exist when not near door
         if(enableExit && Input.GetMouseButtonDown(1))
         {
             
             if(GameManager.Instance.target == null)
             {
                 Debug.Log("You win");
-                
                 
                 // End level with win code here
             }
