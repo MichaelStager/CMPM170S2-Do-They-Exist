@@ -1,6 +1,7 @@
-using NUnit.Framework;
-using UnityEngine;
 using System.Collections.Generic;
+using NUnit.Framework;
+using Unity.VisualScripting;
+using UnityEngine;
 public class GameManager : MonoBehaviour
 {
    public static GameManager Instance;
@@ -13,13 +14,10 @@ public class GameManager : MonoBehaviour
     //The parent for the new gameobjects to spawn into
    [SerializeField] GameObject npcHolder;
    [SerializeField] int npcTotal = 10;
-    //Might not need gameStates but we will see
-   
-    //float timer;
-    // float maxTime = 120;
+    List<GameObject> tvs;
     private void Awake()
     {
-         
+         tvs = new List<GameObject>();
         npcs = new List<NPCData>();
         // Singleton setup. This allows us to keep the same audio manager, and only have 1 at a time.
         if (Instance == null)
@@ -36,9 +34,12 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        GameObject[] foundTVs = GameObject.FindGameObjectsWithTag("TV");
+        tvs.AddRange(foundTVs);
         //These maybe should not be here , but it helps with testing.
         setTargetSprite();
         StartWave();
+        SetTvSprites();
     }
 
     
@@ -84,5 +85,13 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z)) { StartWave(); }
         if (Input.GetKeyDown(KeyCode.X)) { EndRound(); }
+    }
+
+    void SetTvSprites()
+    {
+        foreach(GameObject tv in tvs)
+        {
+            tv.GetComponent<DisplayTVController>().SetTVTargetFace();
+        }
     }
 }
