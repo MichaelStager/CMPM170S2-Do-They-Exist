@@ -32,8 +32,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,11 +41,7 @@ public class GameManager : MonoBehaviour
         StartWave();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     //starts a new "wave" of NPCS. The first NPC spawned will be the target. Due to random spawn locations that doesnt matter.
     void StartWave()
     {
