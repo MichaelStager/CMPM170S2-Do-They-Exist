@@ -35,7 +35,6 @@ public class ExitDoor : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Colliding");
         if(other.gameObject.tag == "Player")
         {
             enableExit = true;
