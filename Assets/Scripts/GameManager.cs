@@ -1,10 +1,12 @@
-using NUnit.Framework;
-using UnityEngine;
 using System.Collections.Generic;
+using NUnit.Framework;
+using Unity.VisualScripting;
+using UnityEngine;
 public class GameManager : MonoBehaviour
 {
    public static GameManager Instance;
    bool isRoundActive;
+   public bool isThereTarget;
    public NPCData target;
    public Sprite targetSprite;
    List<NPCData> npcs;
@@ -13,19 +15,19 @@ public class GameManager : MonoBehaviour
     //The parent for the new gameobjects to spawn into
    [SerializeField] GameObject npcHolder;
    [SerializeField] int npcTotal = 10;
-    //Might not need gameStates but we will see
-   
-    //float timer;
-    // float maxTime = 120;
+    List<GameObject> tvs;
+    public  float MAXLEVELTIME = 120;
+    public float currentLevelTime;
+
     private void Awake()
     {
-         
+         tvs = new List<GameObject>();
         npcs = new List<NPCData>();
         // Singleton setup. This allows us to keep the same audio manager, and only have 1 at a time.
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+           // DontDestroyOnLoad(gameObject); we will prob just want it to reload
         }
         else
         {
@@ -36,11 +38,24 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //These maybe should not be here , but it helps with testing.
-        setTargetSprite();
-        StartWave();
+        currentLevelTime = MAXLEVELTIME;
+        StartNewRound();
+    }
+    private void Update()
+    {
+        currentLevelTime -= Time.deltaTime;
     }
 
+
+    void StartNewRound()
+    {
+        isThereTarget = DecideIfTarget();
+        GameObject[] foundTVs = GameObject.FindGameObjectsWithTag("TV");
+        tvs.AddRange(foundTVs);
+        //These maybe should not be here , but it helps with testing.
+        StartWave();
+        SetTvSprites();
+    }
     
     //starts a new "wave" of NPCS. The first NPC spawned will be the target. Due to random spawn locations that doesnt matter.
     void StartWave()
@@ -48,12 +63,16 @@ public class GameManager : MonoBehaviour
        
         for(int i = 0; i < npcTotal; i++)
         {
-            if (i == 0)
+            if (i == 0 && isThereTarget)
             {
-                npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity,npcHolder.transform).GetComponent<NPCData>().SetTarget());
-             
+                setTargetSprite();
+                npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity, npcHolder.transform).GetComponent<NPCData>().SetTarget());
+
             }
-            npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity,npcHolder.transform).GetComponent<NPCData>());
+            else
+            {
+                npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity, npcHolder.transform).GetComponent<NPCData>());
+            }       
         }
     }
 
@@ -76,10 +95,26 @@ public class GameManager : MonoBehaviour
         npcs.Clear();
     }
 
-
-    private void Update()
+ 
+    void SetTvSprites()
     {
-        if (Input.GetKeyDown(KeyCode.Z)) { StartWave(); }
-        if (Input.GetKeyDown(KeyCode.X)) { EndRound(); }
+        foreach(GameObject tv in tvs)
+        {
+            tv.GetComponent<DisplayTVController>().SetTVTargetFace();
+        }
+    }
+
+    bool DecideIfTarget()
+    {
+       if(Random.Range(0, 2) == 1)
+        {
+            return true;
+        }
+        else
+        {
+            setTargetSprite();
+            return false;
+        }
+       
     }
 }
