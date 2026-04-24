@@ -3,26 +3,12 @@ using UnityEngine;
 
 public class DisplayTVController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public Sprite[] faces;
-    void Start()
-    {
-        
-    }
+    [SerializeField] SpriteRenderer tvScreen;
 
-    // Update is called once per frame
-    void Update()
-    {
-        // tempory way to test if SetTVFaceWorks 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            int randomIndex = Random.Range(0, faces.Length);
-            SetTVFace(faces[randomIndex]);
-        }
-    }
     
-    public void SetTVFace(Sprite newFace)
+    public void SetTVTargetFace()
     {
-        gameObject.GetComponentInChildren<SpriteRenderer>().sprite = newFace;
+        //prob need to change this to a serizalied feild because this will cause an error. if we have two sprite renders on an object.
+        tvScreen.sprite = GameManager.Instance.targetSprite;
     }
 }
