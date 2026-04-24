@@ -62,8 +62,8 @@ Material:
     - _QueueOffset: 0
     - _ScanlineDensity: 180
     - _ScanlineStrength: 0.15
-    - _StaticAmount: 1
-    - _StaticStrength: 0.86
+    - _StaticAmount: 2.3
+    - _StaticStrength: 0.806879
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
