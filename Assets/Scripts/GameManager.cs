@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
    [SerializeField] GameObject npcHolder;
    [SerializeField] int npcTotal = 10;
     List<GameObject> tvs;
+    public  float MAXLEVELTIME = 120;
+    public float currentLevelTime;
+
     private void Awake()
     {
          tvs = new List<GameObject>();
@@ -35,8 +38,14 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        currentLevelTime = MAXLEVELTIME;
         StartNewRound();
     }
+    private void Update()
+    {
+        currentLevelTime -= Time.deltaTime;
+    }
+
 
     void StartNewRound()
     {
@@ -86,13 +95,7 @@ public class GameManager : MonoBehaviour
         npcs.Clear();
     }
 
-    //THIS IS FOR DEBUGGING.
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Z)) { StartNewRound(); }
-        if (Input.GetKeyDown(KeyCode.X)) { EndRound(); }
-    }
-
+ 
     void SetTvSprites()
     {
         foreach(GameObject tv in tvs)
