@@ -10,10 +10,10 @@ public class NPCInterable : MonoBehaviour
     void Update()
     {
         if(ispopupopen && currentNPC == this){
-            if(Input.GetKeyDown(KeyCode.Y)){
+            if(Input.GetMouseButtonDown(0)){
                 OnYesButtonClicked();
             }
-            else if(Input.GetKeyDown(KeyCode.N)){
+            else if(Input.GetMouseButtonDown(1)){
                 OnNoButtonClicked();
             }
         }
