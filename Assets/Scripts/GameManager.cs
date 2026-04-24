@@ -1,6 +1,3 @@
-//TODO: SET THE TARGET TO A THE FIRST PERSON THAT SPAWNS, THEN REMOVE THAT FACE FROM THE LVL FACE POOL.
-// 302----302----302-----302------302------302-----302------302-----302-----302-----302-----302----302 ( I seem to be trapped... inside... by chains...)
-
 using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
@@ -15,11 +12,14 @@ public class GameManager : MonoBehaviour
    [SerializeField] GameObject npcPreFab;
     //The parent for the new gameobjects to spawn into
    [SerializeField] GameObject npcHolder;
-   [SerializeField] int npcTotal = 10; 
+   [SerializeField] int npcTotal = 10;
+    //Might not need gameStates but we will see
+   
     //float timer;
-   // float maxTime = 120;
+    // float maxTime = 120;
     private void Awake()
     {
+         
         npcs = new List<NPCData>();
         // Singleton setup. This allows us to keep the same audio manager, and only have 1 at a time.
         if (Instance == null)
@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     //starts a new "wave" of NPCS. The first NPC spawned will be the target. Due to random spawn locations that doesnt matter.
     void StartWave()
     {
+       
         for(int i = 0; i < npcTotal; i++)
         {
             if (i == 0)
@@ -67,6 +68,18 @@ public class GameManager : MonoBehaviour
     //This is a clean up function for end of round.
     public void EndRound()
     {
-        
+        foreach (NPCData n in npcs)
+        {
+            Destroy(n.gameObject);
+        }
+
+        npcs.Clear();
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z)) { StartWave(); }
+        if (Input.GetKeyDown(KeyCode.X)) { EndRound(); }
     }
 }
