@@ -7,9 +7,13 @@ public class NPCInterable : MonoBehaviour
     public static NPCInterable currentNPC;
 
     private bool ispopupopen = false;
+    private bool wasOpenLastFrame = false;
+    private bool wasCursorLocked = false;
+
+
     void Update()
     {
-        if(ispopupopen && currentNPC == this){
+        if(ispopupopen && currentNPC == this && wasOpenLastFrame){
             if(Input.GetMouseButtonDown(0)){
                 OnYesButtonClicked();
             }
@@ -17,12 +21,14 @@ public class NPCInterable : MonoBehaviour
                 OnNoButtonClicked();
             }
         }
+        wasOpenLastFrame = ispopupopen;
     }
     public void Interact()
     {
         currentNPC = this;
         ispopupopen = true;
         yesOrNoUiPanel.SetActive(true);
+        
         Debug.Log("Interacted with " + gameObject.name);
     }
     //place holder for yes
@@ -31,6 +37,7 @@ public class NPCInterable : MonoBehaviour
         Debug.Log("Yes button clicked for " + gameObject.name);
         yesOrNoUiPanel.SetActive(false);
         currentNPC = null;
+        ispopupopen = false;
     }
     //place holder for no
     public void OnNoButtonClicked()
@@ -38,6 +45,8 @@ public class NPCInterable : MonoBehaviour
         Debug.Log("No button clicked for " + gameObject.name);
         yesOrNoUiPanel.SetActive(false);
         currentNPC = null;
+        ispopupopen = false;
+
     }
     
 }
