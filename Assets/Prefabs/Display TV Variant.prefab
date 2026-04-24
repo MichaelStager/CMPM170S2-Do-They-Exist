@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: TV
       objectReference: {fileID: 0}
+    - target: {fileID: 4125891374118228, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00248
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125891374118228, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00293
+      objectReference: {fileID: 0}
     - target: {fileID: 4308371339295812, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -91,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 6128526535923419386, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 724e8d75fcbfbd741bd25c10ca28cc69, type: 3}
+      objectReference: {fileID: 21300000, guid: fcc07f63fd3eb564a8bff9fad7d0a475, type: 3}
     - target: {fileID: 6128526535923419386, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -122,11 +130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946505447314310648, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0595208
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 8946505447314310648, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.034630727
+      value: 0.105
       objectReference: {fileID: 0}
     - target: {fileID: 8946505447314310648, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalPosition.x
@@ -141,7 +149,8 @@ PrefabInstance:
       value: 0.148
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1014536083046102, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1773044524037658, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
