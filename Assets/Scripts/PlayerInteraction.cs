@@ -9,6 +9,8 @@ public class PlayerInteraction : MonoBehaviour
             foreach(Collider collider in colliders){
                 if(collider.TryGetComponent(out NPCInterable npc)){
                     npc.Interact();
+                    gameObject.GetComponent<PlayerController>().enabled = false;
+                    gameObject.GetComponent<InputController>().enabled = false;
                 }
             }
         }

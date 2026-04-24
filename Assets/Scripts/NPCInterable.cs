@@ -30,6 +30,7 @@ public class NPCInterable : MonoBehaviour
         yesOrNoUiPanel.SetActive(true);
         
         Debug.Log("Interacted with " + gameObject.name);
+
     }
     //place holder for yes
     public void OnYesButtonClicked()
@@ -46,6 +47,8 @@ public class NPCInterable : MonoBehaviour
         yesOrNoUiPanel.SetActive(false);
         currentNPC = null;
         ispopupopen = false;
+        GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
+        GameObject.Find("Player").GetComponent<InputController>().enabled = true;
 
     }
     
