@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
    public static GameManager Instance;
    bool isRoundActive;
+   public bool isThereTarget;
    public NPCData target;
    public Sprite targetSprite;
    List<NPCData> npcs;
@@ -34,14 +35,18 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        StartNewRound();
+    }
+
+    void StartNewRound()
+    {
+        isThereTarget = DecideIfTarget();
         GameObject[] foundTVs = GameObject.FindGameObjectsWithTag("TV");
         tvs.AddRange(foundTVs);
         //These maybe should not be here , but it helps with testing.
-        setTargetSprite();
         StartWave();
         SetTvSprites();
     }
-
     
     //starts a new "wave" of NPCS. The first NPC spawned will be the target. Due to random spawn locations that doesnt matter.
     void StartWave()
@@ -49,8 +54,9 @@ public class GameManager : MonoBehaviour
        
         for(int i = 0; i < npcTotal; i++)
         {
-            if (i == 0)
+            if (i == 0 && isThereTarget)
             {
+                setTargetSprite();
                 npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity, npcHolder.transform).GetComponent<NPCData>().SetTarget());
 
             }
@@ -83,7 +89,7 @@ public class GameManager : MonoBehaviour
     //THIS IS FOR DEBUGGING.
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z)) { StartWave(); }
+        if (Input.GetKeyDown(KeyCode.Z)) { StartNewRound(); }
         if (Input.GetKeyDown(KeyCode.X)) { EndRound(); }
     }
 
@@ -93,5 +99,19 @@ public class GameManager : MonoBehaviour
         {
             tv.GetComponent<DisplayTVController>().SetTVTargetFace();
         }
+    }
+
+    bool DecideIfTarget()
+    {
+       if(Random.Range(0, 2) == 1)
+        {
+            return true;
+        }
+        else
+        {
+            setTargetSprite();
+            return false;
+        }
+       
     }
 }
