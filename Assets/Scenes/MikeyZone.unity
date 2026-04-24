@@ -1218,8 +1218,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
       propertyPath: npcTotal
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: levelFacePool.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: fcc07f63fd3eb564a8bff9fad7d0a475, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 9cadf65e0a6fbdb4493abf634ad2cf9b, type: 3}
     - target: {fileID: 4610681675674543196, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
