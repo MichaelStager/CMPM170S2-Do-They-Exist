@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
   //  [SerializeField] string preTimerText = "TIME LEFT TILL MELTDOWN:";
     [SerializeField] Image timerImage;
+    [SerializeField] Material staticShaderMaterial;
 
     [SerializeField] UnityEngine.Color startColor;
     [SerializeField] UnityEngine.Color endColor;
@@ -25,7 +26,7 @@ public class Timer : MonoBehaviour
         float timeProgress = Mathf.Clamp01(GameManager.Instance.currentLevelTime / GameManager.Instance.MAXLEVELTIME);
 
         timerImage.fillAmount = timeProgress;
-
+        staticShaderMaterial.SetFloat("_StaticStrength", timeProgress);
         // Extract and declare HSV interpolation colors
         UnityEngine.Color.RGBToHSV(startColor, out float startHue, out float startSaturation, out float startLight);
         UnityEngine.Color.RGBToHSV(endColor, out float endHue, out float endSaturation, out float endLight);
