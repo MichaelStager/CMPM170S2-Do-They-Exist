@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+           // DontDestroyOnLoad(gameObject); we will prob just want it to reload
         }
         else
         {
@@ -50,10 +50,13 @@ public class GameManager : MonoBehaviour
         {
             if (i == 0)
             {
-                npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity,npcHolder.transform).GetComponent<NPCData>().SetTarget());
-             
+                npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity, npcHolder.transform).GetComponent<NPCData>().SetTarget());
+
             }
-            npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity,npcHolder.transform).GetComponent<NPCData>());
+            else
+            {
+                npcs.Add(Instantiate(npcPreFab, new Vector3(0, 0, 0), Quaternion.identity, npcHolder.transform).GetComponent<NPCData>());
+            }       
         }
     }
 
@@ -76,7 +79,7 @@ public class GameManager : MonoBehaviour
         npcs.Clear();
     }
 
-
+    //THIS IS FOR DEBUGGING.
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z)) { StartWave(); }
