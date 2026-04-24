@@ -105,6 +105,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6128526535923419386, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6128526535923419386, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_DrawMode
       value: 0
       objectReference: {fileID: 0}
@@ -140,6 +144,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 7642834077360569276}
   m_SourcePrefab: {fileID: 100100000, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
+--- !u!212 &1486625465593046830 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6128526535923419386, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
+  m_PrefabInstance: {fileID: 4732557075509178324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4731918736414136782 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1773044524037658, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
