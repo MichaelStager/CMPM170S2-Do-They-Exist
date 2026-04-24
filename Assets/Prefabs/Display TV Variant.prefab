@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Display TV Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1773044524037658, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
+      propertyPath: m_TagString
+      value: TV
+      objectReference: {fileID: 0}
     - target: {fileID: 4308371339295812, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -26,15 +30,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4308371339295812, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.0481586
+      value: 4.01191
       objectReference: {fileID: 0}
     - target: {fileID: 4308371339295812, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4308371339295812, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.0400387
+      value: -3.8744
       objectReference: {fileID: 0}
     - target: {fileID: 4308371339295812, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalRotation.w
@@ -166,8 +170,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc1d4876b7daa14b8e0baae151e9b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DisplayTVController
-  faces:
-  - {fileID: 21300000, guid: 3b1eef47a663fd543bd65b2cb777e294, type: 3}
-  - {fileID: 21300000, guid: 6db82298d90890d4ba10c4ac2a6e43c9, type: 3}
-  - {fileID: 21300000, guid: a267c9a14af06344fb4d8e80b3e4b37e, type: 3}
-  - {fileID: 21300000, guid: 724e8d75fcbfbd741bd25c10ca28cc69, type: 3}
+  tvScreen: {fileID: 1486625465593046830}
