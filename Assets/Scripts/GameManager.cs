@@ -44,6 +44,11 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         currentLevelTime -= Time.deltaTime;
+        if(currentLevelTime < 0)
+        {
+            EndRound();
+            //you lose type beat
+        }
     }
 
 
@@ -114,7 +119,11 @@ public class GameManager : MonoBehaviour
         {
             setTargetSprite();
             return false;
-        }
-       
+        }  
+    }
+
+    void winHandler()
+    {
+
     }
 }
