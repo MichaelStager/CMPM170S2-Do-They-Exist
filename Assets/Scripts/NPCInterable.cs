@@ -10,7 +10,10 @@ public class NPCInterable : MonoBehaviour
     private bool wasOpenLastFrame = false;
     private bool wasCursorLocked = false;
 
-
+    private void Start()
+    {
+        yesOrNoUiPanel.SetActive(false);
+    }
     void Update()
     {
         if(ispopupopen && currentNPC == this && wasOpenLastFrame){
