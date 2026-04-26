@@ -6,7 +6,7 @@ public class NPCInterable : MonoBehaviour
     public GameObject yesOrNoUiPanel;
     public static NPCInterable currentNPC;
 
-    private bool ispopupopen = false;
+    private bool isPopUpOpen = false;
     private bool wasOpenLastFrame = false;
     private bool wasCursorLocked = false;
 
@@ -16,7 +16,7 @@ public class NPCInterable : MonoBehaviour
     }
     void Update()
     {
-        if(ispopupopen && currentNPC == this && wasOpenLastFrame){
+        if(isPopUpOpen && currentNPC == this && wasOpenLastFrame){
             if(Input.GetMouseButtonDown(0)){
                 OnYesButtonClicked();
             }
@@ -24,12 +24,12 @@ public class NPCInterable : MonoBehaviour
                 OnNoButtonClicked();
             }
         }
-        wasOpenLastFrame = ispopupopen;
+        wasOpenLastFrame = isPopUpOpen;
     }
     public void Interact()
     {
         currentNPC = this;
-        ispopupopen = true;
+        isPopUpOpen = true;
         yesOrNoUiPanel.SetActive(true);
         
         Debug.Log("Interacted with " + gameObject.name);
@@ -41,7 +41,7 @@ public class NPCInterable : MonoBehaviour
         Debug.Log("Yes button clicked for " + gameObject.name);
         yesOrNoUiPanel.SetActive(false);
         currentNPC = null;
-        ispopupopen = false;
+        isPopUpOpen = false;
     }
     //place holder for no
     public void OnNoButtonClicked()
@@ -49,7 +49,7 @@ public class NPCInterable : MonoBehaviour
         Debug.Log("No button clicked for " + gameObject.name);
         yesOrNoUiPanel.SetActive(false);
         currentNPC = null;
-        ispopupopen = false;
+        isPopUpOpen = false;
         GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
         GameObject.Find("Player").GetComponent<InputController>().enabled = true;
 
