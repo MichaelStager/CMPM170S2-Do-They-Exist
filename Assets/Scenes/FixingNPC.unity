@@ -1419,10 +1419,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
-      propertyPath: isAlwaysTargetActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
       propertyPath: levelFacePool.Array.size
       value: 2
       objectReference: {fileID: 0}

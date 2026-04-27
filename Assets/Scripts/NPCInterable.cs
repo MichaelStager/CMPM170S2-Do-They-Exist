@@ -6,13 +6,18 @@ public class NPCInterable : MonoBehaviour
     public GameObject yesOrNoUiPanel;
     public static NPCInterable currentNPC;
 
+    public float rayDistance = 3f;
+    
     private bool isPopUpOpen = false;
     private bool wasOpenLastFrame = false;
-    private bool wasCursorLocked = false;
+    private NPCData npcData;
+    private Camera playerCamera;
 
     private void Start()
     {
         yesOrNoUiPanel.SetActive(false);
+        npcData = GetComponent<NPCData>();
+        playerCamera = Camera.main;
     }
     void Update()
     {
@@ -25,6 +30,22 @@ public class NPCInterable : MonoBehaviour
             }
         }
         wasOpenLastFrame = isPopUpOpen;
+        if(isPopUpOpen && Input.GetMouseButtonDown(0)){
+            TryInteractWithNPC();
+        }
+    }
+    public void TryInteractWithNPC()
+    {
+        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, rayDistance))
+        {
+            if (hit.collider.gameObject == this.gameObject)
+            {
+                Interact();
+            }
+        }
     }
     public void Interact()
     {
@@ -34,11 +55,17 @@ public class NPCInterable : MonoBehaviour
         
         Debug.Log("Interacted with " + gameObject.name);
 
+
     }
     //place holder for yes
     public void OnYesButtonClicked()
     {
         Debug.Log("Yes button clicked for " + gameObject.name);
+        if (GameManager.Instance.isThereTarget && npcData != null && npcData.isTarget != false)
+        {
+            Debug.Log("Correct! You found the target!");
+            GameManager.Instance.EndRound();
+        }
         yesOrNoUiPanel.SetActive(false);
         currentNPC = null;
         isPopUpOpen = false;
@@ -47,6 +74,10 @@ public class NPCInterable : MonoBehaviour
     public void OnNoButtonClicked()
     {
         Debug.Log("No button clicked for " + gameObject.name);
+        if (GameManager.Instance.isThereTarget && npcData != null && npcData.isTarget == false)
+        {
+            Debug.Log("You clicked the wrong target! Game Over!");
+        }
         yesOrNoUiPanel.SetActive(false);
         currentNPC = null;
         isPopUpOpen = false;

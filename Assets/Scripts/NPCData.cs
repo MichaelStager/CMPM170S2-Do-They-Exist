@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class NPCData : MonoBehaviour
 {
-    bool isTarget = false;
+    public bool isTarget = false;
     //The face sprite of the npc
     public SpriteRenderer npcFaceTarget;
 
