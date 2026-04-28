@@ -136,4 +136,8 @@ public class GameManager : MonoBehaviour
     {
         SceneSwapper.GoToNextLevel();
     }
+    public void StartLoseSequence()
+    {
+        SceneSwapper.ReloadLevel();
+    }
 }
