@@ -63,7 +63,7 @@ Material:
     - _ScanlineDensity: 180
     - _ScanlineStrength: 0.15
     - _StaticAmount: 2.24
-    - _StaticStrength: 1.2988547
+    - _StaticStrength: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
