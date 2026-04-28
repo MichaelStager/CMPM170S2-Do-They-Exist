@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7798480751100082628}
   - component: {fileID: 5216805926079148834}
   - component: {fileID: 3793468676694949984}
+  - component: {fileID: 5679956227049309686}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -44,7 +45,7 @@ Camera:
   m_GameObject: {fileID: 1257946739329167901}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -66,7 +67,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 90
   orthographic: 0
@@ -152,6 +153,19 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &5679956227049309686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257946739329167901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19bf532691613cf48aad14ac536ddc07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RayInterator
+  rayRange: 50
 --- !u!1 &2005712662255697851
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1507789550066516338
 Transform:
   m_ObjectHideFlags: 0
@@ -283,7 +297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6973812745933915024
 Transform:
   m_ObjectHideFlags: 0
@@ -627,7 +641,6 @@ GameObject:
   - component: {fileID: 7380336858706288975}
   - component: {fileID: 4237267538091014238}
   - component: {fileID: 4437391762768492008}
-  - component: {fileID: 8253950962937304799}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -727,18 +740,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8253950962937304799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7064142701055696477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 814e14752d88066469198b5a6c62ca56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
 --- !u!1 &9073024133106895963
 GameObject:
   m_ObjectHideFlags: 0

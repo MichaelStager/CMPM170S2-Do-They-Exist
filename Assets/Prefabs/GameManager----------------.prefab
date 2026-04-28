@@ -45,16 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9372682eae9696f49a00224943e6a682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  isThereTarget: 0
+  isAlwaysTargetActive: 1
   target: {fileID: 0}
   targetSprite: {fileID: 0}
   levelFacePool:
-  - {fileID: 21300000, guid: 3b1eef47a663fd543bd65b2cb777e294, type: 3}
-  - {fileID: 21300000, guid: 6db82298d90890d4ba10c4ac2a6e43c9, type: 3}
-  - {fileID: 21300000, guid: a267c9a14af06344fb4d8e80b3e4b37e, type: 3}
-  - {fileID: 21300000, guid: 724e8d75fcbfbd741bd25c10ca28cc69, type: 3}
+  - {fileID: 21300000, guid: fcc07f63fd3eb564a8bff9fad7d0a475, type: 3}
+  - {fileID: 21300000, guid: 9cadf65e0a6fbdb4493abf634ad2cf9b, type: 3}
+  spawnPoints: []
   npcPreFab: {fileID: 7551463741685704458, guid: 6eb744e3b69c1e54692005a12ceab376, type: 3}
   npcHolder: {fileID: 7096864068652360018}
-  npcTotal: 1
+  npcTotal: 10
+  MAXLEVELTIME: 300
+  currentLevelTime: 0
 --- !u!1 &7096864068652360018
 GameObject:
   m_ObjectHideFlags: 0
