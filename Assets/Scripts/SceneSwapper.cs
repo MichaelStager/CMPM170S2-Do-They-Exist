@@ -11,4 +11,9 @@ public class SceneSwapper : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public static void GoToNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
