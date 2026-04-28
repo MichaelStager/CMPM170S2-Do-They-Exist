@@ -5,19 +5,15 @@ public class NPCInterable : MonoBehaviour
     [Header("UI Reference")]
     public GameObject yesOrNoUiPanel;
     public static NPCInterable currentNPC;
-
-    public float rayDistance = 3f;
-    
     private bool isPopUpOpen = false;
     private bool wasOpenLastFrame = false;
     private NPCData npcData;
-    private Camera playerCamera;
+    
 
     private void Start()
     {
         yesOrNoUiPanel.SetActive(false);
         npcData = GetComponent<NPCData>();
-        playerCamera = Camera.main;
     }
     void Update()
     {
@@ -30,23 +26,8 @@ public class NPCInterable : MonoBehaviour
             }
         }
         wasOpenLastFrame = isPopUpOpen;
-        if(isPopUpOpen && Input.GetMouseButtonDown(0)){
-            TryInteractWithNPC();
-        }
     }
-    public void TryInteractWithNPC()
-    {
-        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, rayDistance))
-        {
-            if (hit.collider.gameObject == this.gameObject)
-            {
-                Interact();
-            }
-        }
-    }
     public void Interact()
     {
         currentNPC = this;
