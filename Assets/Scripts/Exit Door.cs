@@ -18,10 +18,10 @@ public class ExitDoor : MonoBehaviour
         // Ensures player doesn't exist when not near door
         if(enableExit && Input.GetMouseButtonDown(1))
         {
-            
+            //If your is correct
             if(GameManager.Instance.target == null)
             {
-                Debug.Log("You win");
+                GameManager.Instance.StartWinSequence();
                 
                 // End level with win code here
             }
