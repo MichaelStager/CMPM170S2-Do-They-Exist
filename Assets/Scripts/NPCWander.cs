@@ -44,13 +44,33 @@ public class NPCWander : MonoBehaviour
 
     void SetNewDestination()
     {
-        Vector3 randomDirection = Random.insideUnitSphere * wanderRadius;
-        randomDirection += transform.position;
+        Vector3 randomPoint = GetRandomNavMeshPoint(transform.position, wanderRadius, 10);
 
-        NavMeshHit hit;
-        if (NavMesh.SamplePosition(randomDirection, out hit, wanderRadius, NavMesh.AllAreas))
+        if (randomPoint != Vector3.zero)
         {
-            agent.SetDestination(hit.position);
+            agent.SetDestination(randomPoint);
         }
+    }
+
+    Vector3 GetRandomNavMeshPoint(Vector3 origin, float distance, int maxAttempts)
+    {
+        for (int i = 0; i < maxAttempts; i++)
+        {
+            Vector3 randomDirection = Random.insideUnitSphere * distance;
+            randomDirection += origin;
+
+            NavMeshHit hit;
+
+            if (NavMesh.SamplePosition(randomDirection, out hit, 2.0f, NavMesh.AllAreas))
+            {
+                NavMeshPath path = new NavMeshPath();
+                if (agent.CalculatePath(hit.position, path) && path.status == NavMeshPathStatus.PathComplete)
+                {
+                    return hit.position;
+                }
+            }
+        }
+
+        return Vector3.zero; // fallback if nothing found
     }
 }
