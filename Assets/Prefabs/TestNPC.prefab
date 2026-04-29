@@ -922,6 +922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   isTarget: 0
   npcFaceTarget: {fileID: 1276168281018003428}
+  npcHuhSFX: {fileID: 8300000, guid: e4dd62720d67bf04ebdb4fd50386b4ad, type: 3}
   yesNoDisplay: {fileID: 1800851984341703205}
 --- !u!114 &369396154904504166
 MonoBehaviour:
