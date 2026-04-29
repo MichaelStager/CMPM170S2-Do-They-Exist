@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19bf532691613cf48aad14ac536ddc07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RayInterator
-  rayRange: 50
+  rayRange: 3
 --- !u!1 &2005712662255697851
 GameObject:
   m_ObjectHideFlags: 0
