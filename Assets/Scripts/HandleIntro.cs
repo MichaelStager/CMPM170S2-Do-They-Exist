@@ -9,6 +9,7 @@ public class HandleIntro : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        videoPlayer.Play();
         // When the loop point (end of video) is reached fire the onvideoFinished void.
         videoPlayer.loopPointReached += OnVideoFinished;
     }
