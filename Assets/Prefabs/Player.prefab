@@ -639,6 +639,7 @@ GameObject:
   - component: {fileID: 615007277432360449}
   - component: {fileID: 7209687231540575164}
   - component: {fileID: 7380336858706288975}
+  - component: {fileID: 1215856428482087770}
   - component: {fileID: 4237267538091014238}
   - component: {fileID: 4437391762768492008}
   m_Layer: 10
@@ -692,6 +693,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InputController
   playerController: {fileID: 7209687231540575164}
+--- !u!114 &1215856428482087770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7064142701055696477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c48facd1827b5478b3539208aa4dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovementAudio
+  footsteps: {fileID: 8300000, guid: 6fe6e3ad2a7dffa42961a8f4dc0543b0, type: 3}
 --- !u!143 &4237267538091014238
 CharacterController:
   m_ObjectHideFlags: 0
