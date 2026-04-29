@@ -22,7 +22,7 @@ EditorBuildSettings:
     guid: 704f6e54ac3cae04a9d63f235992649c
   - enabled: 1
     path: Assets/Scenes/BuildScenes/Medium Level.unity
-    guid: f7d0754ce3f714f488e13baa8c1b9eeb
+    guid: dea3992a94d949a4486de8b934a6ff84
   - enabled: 1
     path: Assets/Scenes/BuildScenes/Map1.unity
     guid: e42d796b301ddac4481ab6c67a162bc8
