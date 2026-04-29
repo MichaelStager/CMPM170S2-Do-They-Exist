@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 4e3f3dc30995ab04cb1ba4a14595668f
+<<<<<<<< HEAD:Assets/Scenes/BuildScenes/Easy Level/NavMesh-NavMesh Surface 1.asset.meta
+guid: 4db85e80738ba854693091060605dd8b
+========
+guid: 502346c9ece637f4899598b812422a7c
+>>>>>>>> main:Assets/Scenes/BuildScenes/Medium Level/NavMesh-NavMesh Surface.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 23800000
