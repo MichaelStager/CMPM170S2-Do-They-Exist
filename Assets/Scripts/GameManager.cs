@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
     List<GameObject> tvs;
     public  float MAXLEVELTIME = 120;
     public float currentLevelTime;
-
+    [SerializeField] AudioClip StageMusic;
+    [SerializeField]bool changeBGM = false;
     private void Awake()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
@@ -42,7 +43,10 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if(changeBGM)
+        {
+            AudioManager.Instance.PlayMusic(StageMusic);
+        }
         currentLevelTime = MAXLEVELTIME;
         StartNewRound();
     }
