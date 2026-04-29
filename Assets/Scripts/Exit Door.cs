@@ -21,16 +21,12 @@ public class ExitDoor : MonoBehaviour
             //If your is correct
             if(GameManager.Instance.target == null)
             {
-                GameManager.Instance.StartWinSequence();
-                
-                // End level with win code here
+               GameManager.Instance.StartWinSequence();
             }
             else
             {
-                Debug.Log("Wrong Guess");
-                // end level code here  
+               GameManager.Instance.StartLoseSequence();
             }
-         
         }
     }
     void OnTriggerEnter(Collider other)
