@@ -153,3 +153,6 @@ MonoBehaviour:
   typeSpeed: 0.05
   delayBeforeFade: 5
   fadeDuration: 1.5
+  typeWriterSFX: {fileID: 8300000, guid: 93b230eda7538b64999e6874cfdb2ab0, type: 3}
+  typeWriterDingSFX: {fileID: 8300000, guid: c4310f2b4c2381748a9a98d240d7fdd9, type: 3}
+  DoesThisManExistSFX: {fileID: 8300000, guid: 29f5cf8789110414095df389fd0489d7, type: 3}
