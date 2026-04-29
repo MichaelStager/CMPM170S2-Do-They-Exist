@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class ExitDoor : MonoBehaviour
 {
+    public AudioClip doorOpenSFX;
     private GameObject ExitUi;
     private bool enableExit = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,6 +32,7 @@ public class ExitDoor : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+        AudioManager.Instance.PlaySFX(doorOpenSFX);
         if(other.gameObject.tag == "Player")
         {
             enableExit = true;

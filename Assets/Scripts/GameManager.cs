@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     List<GameObject> tvs;
     public  float MAXLEVELTIME = 120;
     public float currentLevelTime;
+    public AudioClip BackgroundAmbienceMusic;
+    public AudioClip WaterDripAmbience;
+
     [SerializeField] AudioClip StageMusic;
     [SerializeField]bool changeBGM = false;
     private void Awake()
@@ -43,9 +46,13 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         if(changeBGM)
         {
             AudioManager.Instance.PlayMusic(StageMusic);
+            AudioManager.Instance.PlayMusic(BackgroundAmbienceMusic);
+            AudioManager.Instance.PlayMusic(WaterDripAmbience);
+
         }
         currentLevelTime = MAXLEVELTIME;
         StartNewRound();

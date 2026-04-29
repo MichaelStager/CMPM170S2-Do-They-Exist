@@ -9097,6 +9097,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5999811736505038895, guid: a8456f5ab11d0fa49b5707b7ab5ebb5b, type: 3}
+      propertyPath: typeWriterSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 93b230eda7538b64999e6874cfdb2ab0, type: 3}
     - target: {fileID: 7067387215773084118, guid: a8456f5ab11d0fa49b5707b7ab5ebb5b, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -6,8 +6,10 @@ public class NPCData : MonoBehaviour
     public bool isTarget = false;
     //The face sprite of the npc
     public SpriteRenderer npcFaceTarget;
+    public AudioClip npcHuhSFX;
     [SerializeField] GameObject yesNoDisplay;
     InputController inputController;
+   
     
     bool isBeingQuestioned;
 
@@ -51,6 +53,7 @@ public class NPCData : MonoBehaviour
     {
         if (!isBeingQuestioned)
         {
+            AudioManager.Instance.PlaySFX(npcHuhSFX);
             //This get a referance to the main camera of the scene to 
             Camera.main.GetComponent<CameraController>().LookAtTarget(this);
             isBeingQuestioned = true;

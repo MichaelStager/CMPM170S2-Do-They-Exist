@@ -194,16 +194,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
       propertyPath: changeBGM
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
       propertyPath: StageMusic
       value: 
       objectReference: {fileID: 8300000, guid: 7b031a98c644314419fca1fff879e49a, type: 3}
     - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: WaterDripAmbience
+      value: 
+      objectReference: {fileID: 8300000, guid: d78544734d96f5d4991cc0ec04d1d551, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
       propertyPath: isAlwaysTargetActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: BackgroundAmbienceMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: c0363268425eb7f4f88432459e5f931f, type: 3}
     - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
       propertyPath: levelFacePool.Array.size
       value: 1
@@ -265,9 +273,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4787129705014314985, guid: 9716c9aad4f6d3544b51f34969d0658a, type: 3}
+      propertyPath: Priority
+      value: 68
+      objectReference: {fileID: 0}
     - target: {fileID: 7577615043713293288, guid: 9716c9aad4f6d3544b51f34969d0658a, type: 3}
       propertyPath: m_Name
       value: AudioManager------------
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539878913820383440, guid: 9716c9aad4f6d3544b51f34969d0658a, type: 3}
+      propertyPath: Priority
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539878913820383440, guid: 9716c9aad4f6d3544b51f34969d0658a, type: 3}
+      propertyPath: m_Volume
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 8747886789543883338, guid: 9716c9aad4f6d3544b51f34969d0658a, type: 3}
       propertyPath: m_LocalPosition.x
