@@ -536,6 +536,14 @@ PrefabInstance:
       propertyPath: MAXLEVELTIME
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: WaterDripAmbience
+      value: 
+      objectReference: {fileID: 8300000, guid: c0363268425eb7f4f88432459e5f931f, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: BackgroundAmbienceMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4dc81f68334d0404ebe3ed0a1ab938f9, type: 3}
     - target: {fileID: 4610681675674543196, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.80123
