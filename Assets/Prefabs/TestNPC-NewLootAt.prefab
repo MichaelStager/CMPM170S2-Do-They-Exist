@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestNPC-NewLootAt
       objectReference: {fileID: 0}
+    - target: {fileID: 7780694926278355644, guid: 6eb744e3b69c1e54692005a12ceab376, type: 3}
+      propertyPath: npcHuhSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: fee7a0161af31f546936033e8ef4de4f, type: 3}
     - target: {fileID: 8076975551582783789, guid: 6eb744e3b69c1e54692005a12ceab376, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

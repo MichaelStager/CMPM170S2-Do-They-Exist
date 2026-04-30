@@ -1,23 +1,33 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem.Android;
 
 public class PlayerController : MonoBehaviour
 {
+
+
      private CharacterController characterController;
      public float moveSpeed = 10f, RotationSpeed = 5f;
      private float roatationY;
      private float gravity = 9.81f;
      private float verticalVelocity;
+     private Vector3 move;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+       
+    }
+    public bool isMoving()
+    {
+        
+        return move.x != 0 || move.z != 0;
     }
 
     public void Move(Vector2 movementVector)
     {
-        Vector3 move = transform.forward * movementVector.y + transform.right * movementVector.x;
+        move = transform.forward * movementVector.y + transform.right * movementVector.x;
         move = move * moveSpeed * Time.deltaTime;
         move.y = VerticalForceCalculation();
         characterController.Move(move);

@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class ExitDoor : MonoBehaviour
 {
+    public AudioClip doorOpenSFX;
     private GameObject ExitUi;
     private bool enableExit = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,20 +22,17 @@ public class ExitDoor : MonoBehaviour
             //If your is correct
             if(GameManager.Instance.target == null)
             {
-                GameManager.Instance.StartWinSequence();
-                
-                // End level with win code here
+               GameManager.Instance.StartWinSequence();
             }
             else
             {
-                Debug.Log("Wrong Guess");
-                // end level code here  
+               GameManager.Instance.StartLoseSequence();
             }
-         
         }
     }
     void OnTriggerEnter(Collider other)
     {
+        AudioManager.Instance.PlaySFX(doorOpenSFX);
         if(other.gameObject.tag == "Player")
         {
             enableExit = true;

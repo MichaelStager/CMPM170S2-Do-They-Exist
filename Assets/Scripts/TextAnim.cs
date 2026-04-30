@@ -8,6 +8,10 @@ public class TextAnim : MonoBehaviour
     public float typeSpeed = 0.05f;
     public float delayBeforeFade = 5f;
     public float fadeDuration = 1.5f;
+    public AudioClip typeWriterSFX;
+    public AudioClip typeWriterDingSFX;
+    public AudioClip DoesThisManExistSFX;
+
 
     private TextMeshProUGUI tmpText;
     private string fullText;
@@ -22,17 +26,21 @@ public class TextAnim : MonoBehaviour
     void Start()
     {
         StartCoroutine(PlayEffect());
+       
     }
 
-    IEnumerator PlayEffect()
+        IEnumerator PlayEffect()
     {
+        AudioManager.Instance.PlaySFX(DoesThisManExistSFX);
         foreach (char c in fullText)
         {
             tmpText.text += c;
+            AudioManager.Instance.PlaySFX(typeWriterSFX);
             yield return new WaitForSeconds(typeSpeed);
         }
+        AudioManager.Instance.PlaySFX(typeWriterDingSFX);
+        
         yield return new WaitForSeconds(delayBeforeFade);
-
         float elapsedTime = 0;
         Color originalColor = tmpText.color;
 
