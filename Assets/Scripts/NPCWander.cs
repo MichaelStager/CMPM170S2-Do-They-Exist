@@ -32,8 +32,11 @@ public class NPCWander : MonoBehaviour
 
     void Update()
     {
-        HandleMovement();
-        HandleRotation();
+        if (agent.isActiveAndEnabled == true)
+        {
+            HandleMovement();
+            HandleRotation();
+        }
     }
 
     void HandleMovement()
