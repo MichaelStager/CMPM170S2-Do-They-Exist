@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 public class ExitDoor : MonoBehaviour
 {
     public AudioClip doorOpenSFX;
+    public AudioClip correctSFX;
+    public AudioClip incorrectSFX;
     private GameObject ExitUi;
     private bool enableExit = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,10 +24,12 @@ public class ExitDoor : MonoBehaviour
             //If your is correct
             if(GameManager.Instance.target == null)
             {
+                AudioManager.Instance.PlaySFX(correctSFX);
                GameManager.Instance.StartWinSequence();
             }
             else
             {
+                AudioManager.Instance.PlaySFX(incorrectSFX);
                GameManager.Instance.StartLoseSequence();
             }
         }

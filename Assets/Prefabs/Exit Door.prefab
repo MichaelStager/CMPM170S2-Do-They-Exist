@@ -424,6 +424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExitDoor
   doorOpenSFX: {fileID: 8300000, guid: abebbd5a66cdbe745acc21834c2aa278, type: 3}
+  correctSFX: {fileID: 8300000, guid: 6f61941edac76644698b5becef27e095, type: 3}
+  incorrectSFX: {fileID: 8300000, guid: bb6ea516999b3624f8f167acf463cef3, type: 3}
 --- !u!1 &2175662552005564394
 GameObject:
   m_ObjectHideFlags: 0

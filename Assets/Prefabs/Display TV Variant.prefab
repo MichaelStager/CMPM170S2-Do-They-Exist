@@ -99,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 6128526535923419386, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fcc07f63fd3eb564a8bff9fad7d0a475, type: 3}
+      objectReference: {fileID: 21300000, guid: be10c35a222873c4497e7850504954c9, type: 3}
     - target: {fileID: 6128526535923419386, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -130,19 +130,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946505447314310648, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.13
+      value: 0.10115721
       objectReference: {fileID: 0}
     - target: {fileID: 8946505447314310648, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.105
+      value: 0.10108735
       objectReference: {fileID: 0}
     - target: {fileID: 8946505447314310648, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0671
+      value: 0.0727
       objectReference: {fileID: 0}
     - target: {fileID: 8946505447314310648, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2552
+      value: 0.2574
       objectReference: {fileID: 0}
     - target: {fileID: 8946505447314310648, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -156,9 +156,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1773044524037658, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7642834077360569276}
-    - targetCorrespondingSourceObject: {fileID: 1773044524037658, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6971701228534448814}
   m_SourcePrefab: {fileID: 100100000, guid: c222f9f5d39acc34da546b3f301c3d03, type: 3}
 --- !u!212 &1486625465593046830 stripped
 SpriteRenderer:
@@ -183,24 +180,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DisplayTVController
   tvScreen: {fileID: 1486625465593046830}
---- !u!135 &6971701228534448814
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4731918736414136782}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.5
-  m_Center: {x: 0, y: 0, z: 0}
