@@ -318,6 +318,114 @@ PrefabInstance:
       propertyPath: StageMusic
       value: 
       objectReference: {fileID: 8300000, guid: 7b031a98c644314419fca1fff879e49a, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: levelFacePool.Array.size
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 4aa5937c600a13344a13e5e24c68de63, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: c30a2a7f9a70ffe47b7d630205e1d9cd, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 69c803c7c45dc17468542c3bfd69b48c, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[3]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e3283a2d76d83b458584f2be8773741, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[4]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 3cef4874baac9634e9befba31c766227, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[5]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 4b052f58cf313af479dfee7f66ba4de1, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[6]'
+      value: 
+      objectReference: {fileID: 21300000, guid: be10c35a222873c4497e7850504954c9, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[7]'
+      value: 
+      objectReference: {fileID: 21300000, guid: d8901366e38b8df40b4535566e00961f, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[8]'
+      value: 
+      objectReference: {fileID: 21300000, guid: b06a02be93e64364b84c9e2a9037d29d, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[9]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 78481a45d1cc94345818ebbd8b812f30, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[10]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 55b333a21eac885418ac4f43227cd75a, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[11]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d2be5ecaa61775429e60b8acc829d83, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[12]'
+      value: 
+      objectReference: {fileID: 21300000, guid: c20781d41b38e5043b70d23f6bbafa97, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[13]'
+      value: 
+      objectReference: {fileID: 21300000, guid: f59b9041f2f554b47903b508efdc7c96, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[14]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 1c485bf4781345144bc24327d56598fa, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[15]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d03c359f06f1fa4881fa702e75f43a9, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[16]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 508d4ef49dee72c499f78f4b3cca550a, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[17]'
+      value: 
+      objectReference: {fileID: 21300000, guid: e4207a786d28985428337c8aba42a600, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[18]'
+      value: 
+      objectReference: {fileID: 21300000, guid: d70e2ea02be71ca46988ff146531ebcf, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[19]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b361028f30dae74a954f55e415f2959, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[20]'
+      value: 
+      objectReference: {fileID: 21300000, guid: eca6fc2f2fd65754baa805e7f5d9c573, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[21]'
+      value: 
+      objectReference: {fileID: 21300000, guid: a33b5117a7db5024aafd94b46423c8cb, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[22]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 206ba5fbdb984f044b457b6d53b906ef, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[23]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 705d692d5f1bd544abac1d7f47107515, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[24]'
+      value: 
+      objectReference: {fileID: 21300000, guid: fc5923bfbab367a4b92810a20ad9f972, type: 3}
+    - target: {fileID: 4234918807382630656, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
+      propertyPath: 'levelFacePool.Array.data[25]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 257724ea913975f498b8029e7c15b6f8, type: 3}
     - target: {fileID: 4610681675674543196, guid: c8d5c96929f2caf4cbb43135f41010ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.80123

@@ -923,6 +923,8 @@ MonoBehaviour:
   isTarget: 0
   npcFaceTarget: {fileID: 1276168281018003428}
   npcHuhSFX: {fileID: 8300000, guid: e4dd62720d67bf04ebdb4fd50386b4ad, type: 3}
+  incorrectSFX: {fileID: 8300000, guid: bb6ea516999b3624f8f167acf463cef3, type: 3}
+  correctSFX: {fileID: 8300000, guid: 6f61941edac76644698b5becef27e095, type: 3}
   yesNoDisplay: {fileID: 1800851984341703205}
 --- !u!114 &369396154904504166
 MonoBehaviour:
