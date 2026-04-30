@@ -7,6 +7,8 @@ public class NPCData : MonoBehaviour
     //The face sprite of the npc
     public SpriteRenderer npcFaceTarget;
     public AudioClip npcHuhSFX;
+    public AudioClip incorrectSFX;
+    public AudioClip correctSFX;
     [SerializeField] GameObject yesNoDisplay;
     InputController inputController;
    
@@ -75,11 +77,13 @@ public class NPCData : MonoBehaviour
         {
             if(isTarget)
             {
+                AudioManager.Instance.PlaySFX(correctSFX);
                 GameManager.Instance.StartWinSequence();
                 yesNoDisplay.SetActive(false);
             }
             else
             {
+             AudioManager.Instance.PlaySFX(incorrectSFX);
              GameManager.Instance.StartLoseSequence();
             }
         }
