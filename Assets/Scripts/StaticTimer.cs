@@ -14,8 +14,6 @@ public class StaticTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        Debug.Log(GameManager.Instance.currentLevelTime);
         float timeProgress = Mathf.Clamp01(GameManager.Instance.currentLevelTime / GameManager.Instance.MAXLEVELTIME) * 2;
 
         if (runtimeMaterial != null)

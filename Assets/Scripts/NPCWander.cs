@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -97,7 +98,7 @@ public class NPCWander : MonoBehaviour
 
         return Vector3.zero;
     }
-
+   
  
     void HandleRotation()
     {

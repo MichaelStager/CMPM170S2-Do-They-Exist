@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
    public static GameManager Instance;
@@ -21,11 +22,9 @@ public class GameManager : MonoBehaviour
     List<GameObject> tvs;
     public  float MAXLEVELTIME = 120;
     public float currentLevelTime;
-    public AudioClip BackgroundAmbienceMusic;
-    public AudioClip WaterDripAmbience;
-
     [SerializeField] AudioClip StageMusic;
     [SerializeField]bool changeBGM = false;
+    bool gameEnding = false;
     private void Awake()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
@@ -50,9 +49,6 @@ public class GameManager : MonoBehaviour
         if(changeBGM)
         {
             AudioManager.Instance.PlayMusic(StageMusic);
-            AudioManager.Instance.PlayMusic(BackgroundAmbienceMusic);
-            AudioManager.Instance.PlayMusic(WaterDripAmbience);
-
         }
         currentLevelTime = MAXLEVELTIME;
         StartNewRound();
@@ -60,7 +56,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         currentLevelTime -= Time.deltaTime;
-        if(currentLevelTime < 0)
+        if(currentLevelTime < 0 && !gameEnding)
         {
             EndRound();
             //you lose type beat
@@ -109,12 +105,14 @@ public class GameManager : MonoBehaviour
     //This is a clean up function for end of round.
     public void EndRound()
     {
-        foreach (NPCData n in npcs)
-        {
-            Destroy(n.gameObject);
-        }
+        //foreach (NPCData n in npcs)
+        // {
+        //     Destroy(n.gameObject);
+        // }
 
-        npcs.Clear();
+        // npcs.Clear();
+        gameEnding = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
  
