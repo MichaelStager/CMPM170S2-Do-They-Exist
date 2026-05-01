@@ -55,15 +55,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DesaturateStrength: 137.6
-    - _NoiseScale: 46.42
-    - _NoiseSpeed: 0.5
+    - _DesaturateStrength: 24.3
+    - _NoiseScale: 612
+    - _NoiseSpeed: 7.4
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ScanlineDensity: 180
     - _ScanlineStrength: 0.15
-    - _StaticAmount: 2.24
-    - _StaticStrength: 0
+    - _StaticAmount: 3.4
+    - _StaticStrength: 0.06587052
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
