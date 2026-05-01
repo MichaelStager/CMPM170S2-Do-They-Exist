@@ -130,7 +130,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _StaticAmount: 3.4
-    - _StaticStrength: 0.1283555
+    - _StaticStrength: 1.025952
     - _Surface: 0
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
