@@ -23,17 +23,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BuildScenes/Medium Level.unity
     guid: dea3992a94d949a4486de8b934a6ff84
-  - enabled: 0
-    path: Assets/Scenes/Hard Level.unity
-    guid: e42d796b301ddac4481ab6c67a162bc8
   - enabled: 1
     path: Assets/Scenes/BuildScenes/Hard Stage.unity
     guid: e1a0b6e27fb737d4d8df29922590eaa4
   - enabled: 1
     path: Assets/Scenes/BuildScenes/OutroScene.unity
     guid: 4eb8507b313e9884db9798613344fec0
-  - enabled: 1
-    path: Assets/Scenes/MikeyZone.unity
-    guid: 196e9e19c93193f40b615e65dfc5a11a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

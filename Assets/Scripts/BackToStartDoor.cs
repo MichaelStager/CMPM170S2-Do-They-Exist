@@ -22,6 +22,7 @@ public class BackToStartDoor : MonoBehaviour
         // Ensures player doesn't exist when not near door
         if(enableExit && Input.GetMouseButtonDown(1))
         {
+        AudioManager.Instance.StopMusic();
         SceneManager.LoadScene(0);
         }
     }
