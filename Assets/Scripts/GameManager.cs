@@ -22,9 +22,6 @@ public class GameManager : MonoBehaviour
     List<GameObject> tvs;
     public  float MAXLEVELTIME = 120;
     public float currentLevelTime;
-    public AudioClip BackgroundAmbienceMusic;
-    public AudioClip WaterDripAmbience;
-
     [SerializeField] AudioClip StageMusic;
     [SerializeField]bool changeBGM = false;
     bool gameEnding = false;
@@ -52,9 +49,6 @@ public class GameManager : MonoBehaviour
         if(changeBGM)
         {
             AudioManager.Instance.PlayMusic(StageMusic);
-            AudioManager.Instance.PlayMusic(BackgroundAmbienceMusic);
-            AudioManager.Instance.PlayMusic(WaterDripAmbience);
-
         }
         currentLevelTime = MAXLEVELTIME;
         StartNewRound();
