@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
    public Sprite targetSprite;
    List<NPCData> npcs;
    public List<Sprite> levelFacePool;
-    public GameObject[] spawnPoints;
+   public GameObject[] spawnPoints;
    [SerializeField] GameObject npcPreFab;
     //The parent for the new gameobjects to spawn into
    [SerializeField] GameObject npcHolder;

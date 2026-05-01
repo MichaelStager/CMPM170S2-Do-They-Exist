@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99599615156897143}
   - component: {fileID: 558772991820168703}
+  - component: {fileID: 8577897019283686318}
   m_Layer: 5
   m_Name: TimerUI
   m_TagString: Untagged
@@ -127,6 +128,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timerImage: {fileID: 1303836948935618440}
+--- !u!114 &8577897019283686318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604288160897851604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a72bced776c9744bb2e71f0aa91bb9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StaticTimer
+  runtimeMaterial: {fileID: 2100000, guid: 0a5eaa7422bb55c4e847833a62cb1523, type: 2}
 --- !u!1 &3981766970395408060
 GameObject:
   m_ObjectHideFlags: 0
