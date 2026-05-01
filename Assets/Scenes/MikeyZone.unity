@@ -216,52 +216,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8456f5ab11d0fa49b5707b7ab5ebb5b, type: 3}
---- !u!1 &279305561
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 279305563}
-  - component: {fileID: 279305562}
-  m_Layer: 0
-  m_Name: TestAUDIO(I AM ROCK!!!)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &279305562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279305561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 079a65e02cbbb7441b1fce016fc52101, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayAudios
-  bgMusic: {fileID: 8300000, guid: 658255bc32f06d846af391e3cdc721be, type: 3}
-  rockTalkSFX: {fileID: 8300000, guid: 9c66152c868fe6c45951cdf647307337, type: 3}
---- !u!4 &279305563
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279305561}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &336954371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1452,7 +1406,6 @@ SceneRoots:
   - {fileID: 1461592620}
   - {fileID: 552260955}
   - {fileID: 1739389838139321421}
-  - {fileID: 279305563}
   - {fileID: 1763043634}
   - {fileID: 8166089675798974258}
   - {fileID: 1723172550}
