@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private Image timerImage;
-
+    
     private void Update()
     {
         float timeProgress = Mathf.Clamp01(
