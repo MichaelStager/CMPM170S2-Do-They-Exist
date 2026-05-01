@@ -911,11 +911,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8404795416716661079, guid: 1888ec6a808231d42bc7e29d25028ef9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1281634610189761672, guid: 1888ec6a808231d42bc7e29d25028ef9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1655405817}
   m_SourcePrefab: {fileID: 100100000, guid: 1888ec6a808231d42bc7e29d25028ef9, type: 3}
+--- !u!1 &1655405816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1281634610189761672, guid: 1888ec6a808231d42bc7e29d25028ef9, type: 3}
+  m_PrefabInstance: {fileID: 1655405815}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1655405817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655405816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91b9e21c05021e048b74072bea15f707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackToStartDoor
+  doorOpenSFX: {fileID: 8300000, guid: fdda45f1fec07764cafdb8ccb9621d27, type: 3}
+  correctSFX: {fileID: 8300000, guid: 6f61941edac76644698b5becef27e095, type: 3}
+  incorrectSFX: {fileID: 8300000, guid: d78544734d96f5d4991cc0ec04d1d551, type: 3}
 --- !u!1 &1723172548
 GameObject:
   m_ObjectHideFlags: 0

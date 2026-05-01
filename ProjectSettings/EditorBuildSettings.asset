@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BuildScenes/OutroScene.unity
     guid: 4eb8507b313e9884db9798613344fec0
+  - enabled: 1
+    path: Assets/Scenes/MikeyZone.unity
+    guid: 196e9e19c93193f40b615e65dfc5a11a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
