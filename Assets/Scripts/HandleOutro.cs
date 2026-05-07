@@ -24,6 +24,8 @@ public class HandleOutro : MonoBehaviour
 
     private void CleanUp()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         playerController.enabled = true;
         videoObject.SetActive(false);
         videoPlayer.loopPointReached -= OnVideoFinished;
