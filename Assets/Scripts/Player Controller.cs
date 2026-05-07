@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 
 
      private CharacterController characterController;
-     public float moveSpeed = 10f, RotationSpeed = 5f;
+     public float moveSpeed = 10f, RotationSpeed = 5f , sprintSpeed, baseMoveSpeed = 10f;
      private float roatationY;
      private float gravity = 9.81f;
      private float verticalVelocity;
@@ -17,7 +17,18 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
-       
+        sprintSpeed = moveSpeed * 1.3f;
+    }
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            moveSpeed = sprintSpeed;
+        }
+        else
+        {
+            moveSpeed = baseMoveSpeed;
+        }
     }
     public bool isMoving()
     {

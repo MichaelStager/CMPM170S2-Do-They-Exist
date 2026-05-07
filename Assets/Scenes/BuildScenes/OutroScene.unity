@@ -22743,18 +22743,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'A Prototype Made By:
 
-    Michael Stager
+    Michael Stager - Producer and lead programmer
 
-    Robert Stager
+    Robert
+    Stager - Lead Artist
 
-    Romeo
-    Moreno
+    Aaron Chen - Map Designer
 
-    Aaron Chen
+    Michael Tang - Programmer
 
-    Michael Tang
-
-    Ananya Setty'
+    Ananya
+    Setty - Programmer '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -36945,6 +36944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 2
   RotationSpeed: 10
+  sprintSpeed: 0
+  baseMoveSpeed: 10
 --- !u!135 &7234309561849635892
 SphereCollider:
   m_ObjectHideFlags: 0
